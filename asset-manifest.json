@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Kucher-mx/ASD_krsch/static/css/main.07dc5f1f.chunk.css",
+    "main.js": "/Kucher-mx/ASD_krsch/static/js/main.bdc5a04a.chunk.js",
+    "main.js.map": "/Kucher-mx/ASD_krsch/static/js/main.bdc5a04a.chunk.js.map",
+    "runtime-main.js": "/Kucher-mx/ASD_krsch/static/js/runtime-main.a4070f77.js",
+    "runtime-main.js.map": "/Kucher-mx/ASD_krsch/static/js/runtime-main.a4070f77.js.map",
+    "static/css/2.373bc5f8.chunk.css": "/Kucher-mx/ASD_krsch/static/css/2.373bc5f8.chunk.css",
+    "static/js/2.b6b33154.chunk.js": "/Kucher-mx/ASD_krsch/static/js/2.b6b33154.chunk.js",
+    "static/js/2.b6b33154.chunk.js.map": "/Kucher-mx/ASD_krsch/static/js/2.b6b33154.chunk.js.map",
+    "index.html": "/Kucher-mx/ASD_krsch/index.html",
+    "static/css/2.373bc5f8.chunk.css.map": "/Kucher-mx/ASD_krsch/static/css/2.373bc5f8.chunk.css.map",
+    "static/css/main.07dc5f1f.chunk.css.map": "/Kucher-mx/ASD_krsch/static/css/main.07dc5f1f.chunk.css.map",
+    "static/js/2.b6b33154.chunk.js.LICENSE.txt": "/Kucher-mx/ASD_krsch/static/js/2.b6b33154.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4070f77.js",
+    "static/css/2.373bc5f8.chunk.css",
+    "static/js/2.b6b33154.chunk.js",
+    "static/css/main.07dc5f1f.chunk.css",
+    "static/js/main.bdc5a04a.chunk.js"
+  ]
+}
