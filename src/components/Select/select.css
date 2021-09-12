@@ -1,0 +1,14 @@
+.select_wrapper {
+    width: 18%;
+}
+
+.select {
+    width: 100%;
+}
+
+.select select {
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}

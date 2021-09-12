@@ -1,0 +1,11 @@
+.input_wrapper {
+    width: 30%;
+}
+
+.input {
+    width: 100%;
+}
+
+.input input {
+    text-align: center;
+}
