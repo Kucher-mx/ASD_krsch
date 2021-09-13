@@ -80,8 +80,10 @@ const partition = (arr: CoinType[], left: number, right: number) => {
   return i;
 };
 
-export const quickSort = (arr: CoinType[], left: number, right: number) => {
+let quickCount = 0;
+const quickSortStart = (arr: CoinType[], left: number, right: number) => {
   let index;
+  quickCount++;
   if (arr.length > 1) {
     index = partition(arr, left, right);
     if (left < index - 1) {
@@ -94,17 +96,27 @@ export const quickSort = (arr: CoinType[], left: number, right: number) => {
   return arr;
 };
 
-export const shellSort = (arr: CoinType[]): CoinType[] => {
+export const quickSort = (arr: CoinType[], left: number, right: number) => {
+  const sortedData = quickSortStart(arr, left, right);
+  return { sortedData, quickCount };
+};
+
+export const shellSort = (
+  arr: CoinType[]
+): { sortedData: CoinType[]; shellCount: number } => {
+  let shellCount = 0;
   let n = arr.length;
   for (let gap = Math.floor(n / 2); gap > 0; gap = Math.floor(gap / 2)) {
     for (let i = gap; i < n; i += 1) {
-      let temp = arr[i];
+      let temp = JSON.parse(JSON.stringify(arr[i]));
       let j;
-      for (j = i; j >= gap && arr[j - gap].price > temp.price; j -= gap) {
-        arr[j] = arr[j - gap];
+      for (j = i; j >= gap && +arr[j - gap].price < +temp.price; j -= gap) {
+        shellCount++;
+        arr[j] = JSON.parse(JSON.stringify(arr[j - gap]));
       }
-      arr[j] = temp;
+      arr[j] = JSON.parse(JSON.stringify(temp));
     }
   }
-  return arr;
+
+  return { sortedData: arr, shellCount };
 };

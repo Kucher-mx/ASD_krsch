@@ -42,22 +42,48 @@ const Header = (props: Props) => {
     });
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    let performance1, performance2;
     if (e.target.value === "quick") {
-      const sortedData = quickSort(props.data, 0, props.data.length - 1);
+      performance1 = performance.now();
+      const { sortedData, quickCount } = quickSort(
+        props.data,
+        0,
+        props.data.length - 1
+      );
+      performance2 = performance.now();
+      console.log(
+        "%cperformance of quick sort & count of quickSort's iterations: ",
+        "color: green",
+        performance2 - performance1,
+        quickCount
+      );
+
       props.setLoading(true);
       props.setData(sortedData);
       props.setLoading(false);
     } else if (e.target.value === "default") {
+      performance1 = performance.now();
       const sortedData = props.data.sort(
         (itemOne, itemTwo) => itemOne.rank - itemTwo.rank
+      );
+      performance2 = performance.now();
+      console.log(
+        "%cperformance of default sort: ",
+        "color: blue",
+        performance2 - performance1
       );
       props.setLoading(true);
       props.setData(sortedData);
       props.setLoading(false);
     } else {
-      // const sortedData = shellSort(props.data);
-      const sortedData = props.data.sort(
-        (itemOne, itemTwo) => itemTwo.price - itemOne.price
+      performance1 = performance.now();
+      const { sortedData, shellCount } = shellSort(props.data);
+      performance2 = performance.now();
+      console.log(
+        "%cperformance of shell's sort & count of shell's iterations: ",
+        "color: orange",
+        performance2 - performance1,
+        shellCount
       );
       props.setLoading(true);
       props.setData(sortedData);

@@ -8,8 +8,6 @@ const initialState: StateType = {
 };
 
 export default function rootReducer(state = initialState, action: Action) {
-  console.log(action);
-
   switch (action.type) {
     case types.SET_DATA:
       return { ...state, data: action.payload };
